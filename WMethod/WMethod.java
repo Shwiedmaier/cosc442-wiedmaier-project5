@@ -405,16 +405,6 @@ public class WMethod {
 																	// tests.
 		Utilities.printAllTestCases(tests); // Print tests.
 
-		// TODO: Write the necessary code to iterate through all test cases and
-		// run them against
-		// the FSM using the Utilities.runFSM() method.
-		//
-		// Example use of the Utilities.runFSM() method
-		// Utilities.runFSM(FSM, 1, "a a b a b", " ");
-		String id = tests.toString();
-		id = id.replace("[", "");
-		id = id.replace("]", "");
-
 		String[] Attempt1 = tests.toArray(new String[tests.size()]);
 
 		for (int i = 0; i < Attempt1.length; i++) {
