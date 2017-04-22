@@ -408,9 +408,15 @@ public class WMethod {
 		String[] Attempt1 = tests.toArray(new String[tests.size()]);
 
 		for (int i = 0; i < Attempt1.length; i++) {
+			System.out.println("@Test");
+			System.out.println("public void testCase" + i + "(){");
 			String Temp = Attempt1[i];
 			Temp = Temp.replace("", " ").trim();
-			Utilities.runFSM(FSM, 1, Temp, " ");
+			// System.out.println(Utilities.runFSM(FSM, 1, Temp, " "));
+			if (Utilities.runFSM(FSM, 1, Temp, " ").contains("yes"))
+				System.out.println("assertTrue(JamesBond.bondRegex(\"" + Attempt1[i] + "\"));}");
+			else
+				System.out.println("assertFalse(JamesBond.bondRegex(\"" + Attempt1[i] + "\"));}");
 		}
 
 	}// End of main()
